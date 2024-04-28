@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap') ; /* CSS from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+h1{
+	font-family: 'Cinzel', cursive;
+	text-align: center;
+	font-size: 4em;
+	color: black;
+}
+.mahad{
+	height:170px;
+	width: 100%;
+	
+}
+.mahad img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ h2{
+	 font-family: 'Single Day', cursive;
+	 color: red;
+	 
+ }
+ #home-hero{
+	 background-image: url(artist/flower.jpg);
+	 height: 400px;
+	 background-size: cover;
+	 background-repeat: no-repeat;
+ }
+ #home-hero h1{
+	 text-align: center;
+	 color: red;
+	 text-shadow: 2px 2px 2px black;
+	 margin: 0;
+	 padding: 10px;
+	 background-color: rgba(0,0,0,.5);
+ }
+ body{
+	 background-color: white;
+	 margin: 0px;
+ }
+
+.img2{
+	float: right;
+}
+p{
+	 font-family: 'Rubik Scribble', cursive;
+	 color: black;
+}
+ a{
+	 font-family: 'Rubik Scribble', cursive;
+	 color: white;
+ }
+ nav{
+	 font-size: 24px;
+	 max-width: 100%;
+	 margin-top: -60px;
+	 background-color: black;
+	 border-top: 2px white solid;
+	 border-bottom: 2px black solid;
+ }
+nav ul{
+	padding-top:12px;
+	text-align: center;
+	list-style-type: none;
+}
+footer{
+	margin-top:50px;
+	background-color:black;
+	
+}
+.photo{
+	background-color: gray;
+	width: 100%;
+	padding: 20px;
+}
+.value{
+	font-size: 3em;
+	color: red;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+ .col-sm-4 {
+    width: 250px;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(255, 0, 0, 0.5);
+    text-align: center;
+	color: white;
+}
+ .fa{
+	 font-size: 2em;
+	 color: red;
+ }
+ span{
+	font-size:1.2em;
+	color: red;
+}
+/* Your existing CSS styles */
+
+/* Style for buttons */
+.myButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.myButton:hover {
+    background-color: #45a049; 
+}
+
+
+footer a{
+	text-align: center;
+	margin-right: 10px;
+}
+main{
+	max-width: 500px;
+	margin: 20px auto;
+	
+}
+nav li{
+	display: inline;
+}
+nav a{
+	text-decoration: none;
+	padding-right: 10px;
+}
+p{
+	font-family: 'Single Day';
+}
+nav a:link{
+	color: white;
+}
+nav a:visited{
+	color: white;
+}
+nav a:hover{
+	color: lightgray;
+}
+nav a:active{
+	color: yellow;
+}
+.gallery .preview{
+    width: 100%;
+    height: auto;
+}
+
+.gallery .gallery-thumbnails img {
+    width:300px;
+    height: 175px;
+    margin: 3px 10px 10px 0;
+}
+
+.gallery .gallery-thumbnails img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.gallery .preview img#preview {
+    padding: 1px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block; 
+}
+
+/* CSS without a media query--applies to all sizes unless overridden */
+h1{
+		font-size:4em;
+}
+
+/* CSS Adjustments for Tablets */
+@media only screen and (max-width:1024px)
+{
+	h1{
+		font-size:2em;
+	}
+}
+/* CSS Adjustments for Smartphones */
+@media only screen and (max-width: 768p)
+{
+	h1{
+		font-size: 1.5em;
+	}
+}
