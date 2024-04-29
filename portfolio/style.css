@@ -23,6 +23,14 @@ h1{
 	 color: red;
 	 
  }
+ .resume{
+	 background-color: black;
+	 color: white;
+ }
+ .index {
+	 background-color: gray;
+
+ }
  #home-hero{
 	 background-image: url(artist/flower.jpg);
 	 height: 400px;
@@ -37,39 +45,66 @@ h1{
 	 padding: 10px;
 	 background-color: rgba(0,0,0,.5);
  }
- body{
-	 background-color: white;
-	 margin: 0px;
- }
+body {
+    font-family: 'Rubik Scribble', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+}
+
 
 .img2{
 	float: right;
 }
-p{
-	 font-family: 'Rubik Scribble', cursive;
-	 color: black;
+p {
+    font-family: 'Rubik Scribble', cursive;
+    color: black;
 }
+.summary {
+    height: 100%; /* Ensure the summary column fills the height of its container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary h1 {
+    font-size:4em; /* Adjust heading size */
+}
+
+.summary p {
+    font-size: 3em; /* Adjust paragraph text size */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .summary {
+        height: auto; /* Reset height on smaller screens */
+    }
+}
+
  a{
 	 font-family: 'Rubik Scribble', cursive;
 	 color: white;
  }
  nav{
-	 font-size: 24px;
+	 font-size: 1.5em;
 	 max-width: 100%;
 	 margin-top: -60px;
 	 background-color: black;
 	 border-top: 2px white solid;
 	 border-bottom: 2px black solid;
  }
+
 nav ul{
 	padding-top:12px;
 	text-align: center;
 	list-style-type: none;
 }
-footer{
-	margin-top:50px;
-	background-color:black;
-	
+footer {
+    margin-top: 20px; 
+    background-color: darkgray ; 
+    padding: 20px 0;
 }
 .photo{
 	background-color: gray;
@@ -81,12 +116,14 @@ footer{
 	color: red;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
- .col-sm-4 {
-    width: 250px;
-    background-color: black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(255, 0, 0, 0.5);
-    text-align: center;
-	color: white;
+.col-sm-4 {
+    flex: 1 0 250px;
+    margin: 10px;
+}
+.col-md-6 a {
+  font-size: 4em;
+  color: black;
+  font-family: 'Single Day', cursive;
 }
  .fa{
 	 font-size: 2em;
@@ -122,11 +159,22 @@ footer a{
 	text-align: center;
 	margin-right: 10px;
 }
-main{
-	max-width: 500px;
-	margin: 20px auto;
-	
+main {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
+.container-fluid {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 nav li{
 	display: inline;
 }
@@ -174,21 +222,28 @@ nav a:active{
 }
 
 /* CSS without a media query--applies to all sizes unless overridden */
-h1{
-		font-size:4em;
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
 }
 
-/* CSS Adjustments for Tablets */
-@media only screen and (max-width:1024px)
-{
-	h1{
-		font-size:2em;
-	}
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
 }
-/* CSS Adjustments for Smartphones */
-@media only screen and (max-width: 768p)
-{
-	h1{
-		font-size: 1.5em;
+/* JavaScript Game changes for mobile */
+.mobile{
+	display:none;
+}
+@media only screen and (max-width: 768px){
+	.desktop{
+		display:none;
+	}
+	.mobile{
+		display: block;
+		touch-action: manipulation;
 	}
 }

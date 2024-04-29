@@ -38,17 +38,29 @@
 <main>
 <h1>Flappy Cat</h1>
  <div id="game"></div>
-   <div class="game-controls">
-      <button id="accelerateButton" class="myButton" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Jump</button>
-	  <a href="" ><button class="myButton">PLAY AGAIN</button></a>
-        </div>
+   <div class="game-controls desktop">
+	<button class="myButton" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">FLAP WINGS</button>
+	<a href="" ><button class="myButton">PLAY AGAIN</button></a>
+</div>
+					
+<div class="game-controls mobile">
+	<button class="myButton" ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)">FLAP WINGS</button>
+	<a href="" ><button class="myButton">PLAY AGAIN</button></a>
+</div>
+
     
    </div>
  <script>
       var myGamePiece;
       var myObstacles = [];
       var myScore;
-      
+      var canvasWidth = 640;
+	  var canvasHeight = 360;
+	  if (window.innerWidth < 768){
+	  canvasWidth = 300;
+	  canvasHeight= 300;
+}
+
       function startGame() {
           myGamePiece = new component(60, 60,"artist/kitty-1.png",10,120,"image");
           myGamePiece.gravity = 0.02;
@@ -59,8 +71,8 @@
       var myGameArea = {
           canvas : document.createElement("canvas"),
           start : function() {
-              this.canvas.width = 640;
-              this.canvas.height = 360;
+              this.canvas.width = canvasWidth;
+              this.canvas.height = canvasHeight;
               this.context = this.canvas.getContext("2d");
               var myGame = document.getElementById("game");
               myGame.insertBefore(this.canvas, myGame.childNodes[0]);        
@@ -170,35 +182,42 @@
       function accelerate(n) {
           myGamePiece.gravity = n;
       }
+	  
    </script>
   </main>
 <footer>
- <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
-                <ul>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:admin@websitedeluxe.com">Email Us</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-4">
-                <ul>
+                <h4>Contact Us</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:admin@websitedeluxe.com">admin@websitedeluxe.com</a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:8008675309">(800) 867-5309</a></li>
+                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i> <a href="sms:8008675309">Text Us PLEASE!</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
-                <ul>
-                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i> <a href="sms:8008675309">Text Us PLEASE!</a></li>
+                <h4>About Us</h4>
+                <p>We are a web development company based in St. Paul, Minnesota. Our mission is to deliver high-quality websites and digital solutions.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Follow Us</h4>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
-                <span><small>&copy; MAHAD ABDISHAKUR. All rights reserved.</small></span>
+            <div class="col-sm-12 text-center">
+                <hr>
+                <p>&copy; 2024 MAHAD ABDISHAKUR. All rights reserved. | Built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p>
             </div>
         </div>
     </div>
 </footer>
-
 <!--jQuery, Popper, and Bootstrap Javascript files-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
