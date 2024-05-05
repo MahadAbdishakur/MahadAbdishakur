@@ -24,15 +24,15 @@ h1{
 	 
  }
  .resume{
-	 background-color: black;
-	 color: white;
+	 background-color: gray;
  }
+ 
  .index {
 	 background-color: gray;
 
  }
  #home-hero{
-	 background-image: url(artist/flower.jpg);
+	 background-image: url(images/flower.jpg);
 	 height: 400px;
 	 background-size: cover;
 	 background-repeat: no-repeat;
@@ -68,11 +68,11 @@ p {
 }
 
 .summary h1 {
-    font-size:4em; /* Adjust heading size */
+    font-size:2em; /* Adjust heading size */
 }
 
 .summary p {
-    font-size: 3em; /* Adjust paragraph text size */
+    font-size: 1.5em; /* Adjust paragraph text size */
     line-height: 1.6; /* Adjust line height for readability */
 }
 
@@ -95,7 +95,6 @@ p {
 	 border-top: 2px white solid;
 	 border-bottom: 2px black solid;
  }
-
 nav ul{
 	padding-top:12px;
 	text-align: center;
@@ -124,6 +123,9 @@ footer {
   font-size: 4em;
   color: black;
   font-family: 'Single Day', cursive;
+}
+.links {
+	font-size: 10px;
 }
  .fa{
 	 font-size: 2em;
@@ -160,7 +162,7 @@ footer a{
 	margin-right: 10px;
 }
 main {
-    max-width: 100%;
+    max-width: 1200px%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -233,6 +235,21 @@ nav a:active{
     h1 {
         font-size: 1.5em;
     }
+	.gallery .gallery-thumbnails img {
+    width:100px;
+    height: 75px;
+    margin: 3px 10px 10px 0;
+}
+.summary h1 {
+    font-size:1.2em; /* Adjust heading size */
+}
+
+.summary p {
+    font-size: 1.2em; /* Adjust paragraph text size */
+    line-height: 1.2; /* Adjust line height for readability */
+}
+
+
 }
 /* JavaScript Game changes for mobile */
 .mobile{
